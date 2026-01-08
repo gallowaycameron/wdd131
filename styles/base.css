@@ -1,5 +1,5 @@
 :root {
-    --primary: #2C6E49;
+    --primary: #24593d;
     --secondary: #E0E0E0;
     --background: #fff;
     --dark-text: #000;
@@ -90,7 +90,8 @@ main {
 }
 
 footer {
-    color: var(--dark-text);
+    background-color: var(--primary);
+    color: var(--light-text);
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
@@ -98,6 +99,22 @@ footer {
 }
 
 nav a:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.resources li {
+    margin: 0.25rem;
+}
+
+.resources a {
+    color: var(--dark-text);
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+.resources a:hover {
     text-decoration: underline;
     color: var(--primary);
 }
