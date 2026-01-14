@@ -1,0 +1,91 @@
+:root {
+    --primary: #24593d;
+    --secondary: #E0E0E0;
+    --background: #fff;
+    --hover-color: #7b9e8b;
+    --dark-text: #000;
+    --light-text: #fff;
+    --main-font: 'Roboto', sans-serif;
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: var(--main-font);
+    background-color: var(--background);
+    color: var(--dark-text);
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--light-text);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0 auto;
+}
+
+#menuBtn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--light-text);
+}
+
+#menuBtn:hover {
+    background-color: var(--hover-color);
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+}
+
+nav.open {
+    display: flex;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    background-color: var(--secondary);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
