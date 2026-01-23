@@ -75,6 +75,10 @@ footer {
     max-width: 8rem;
 }
 
+.label {
+    font-weight: bold;
+}
+
 @media screen and (min-width: 750px) {
     .hero {
         position: relative;
