@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page</title>
+    <meta name="author" content="Cameron Galloway">
+    <meta name="description" content="A page that describes Germany and the typical weather there.">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+            <h1>Germany</h1>
+    </header>
+
+    <main>
+        <div class="content">
+            <section class="hero">
+                <picture>
+                    <source media="(max-width: 750px)" srcset="images/germany-castle-small.webp">
+                    <img src="images/germany-city-large.webp" alt="German Lanscape">
+                </picture>
+            </section>
+
+            <section class="data">
+                <h2>Data</h2>
+            
+                <p>Area: 357,022km²</p>
+                <p>Population: 83,719,540</p>
+                <p>Capital: Berlin</p>
+                <p>Languages: German</p>
+                <p>Currency: Euro</p>
+                <p>Time Zone: UTC+1 & UTC+2</p>
+                <p>Calling Code: +49</p>
+                <p>Internet TLD: .de</p>
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+
+                <p>Temperature: <span id="temp">-4</span> °C</p>
+                <p>Conditions: Mostly Cloudy</p>
+                <p>Wind: <span id="wind">14</span> km/h</p>
+                <p>Wind Chill: <span id="windchill">N/A</span></p>
+            </section>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Cameron Galloway - Utah</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

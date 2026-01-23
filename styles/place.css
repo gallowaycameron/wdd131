@@ -1,0 +1,57 @@
+:root {
+    --primary: #DD0000;
+    --secondary: #FFCC00;
+    --background: #fff;
+    --dark-text: #000;
+    --light-text: #fff;
+    --main-font: 'Roboto', sans-serif;
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.content {
+    display: block;
+    margin: 1rem;
+}
+
+.data,
+.hero,
+.weather {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .data,
+    .weather {
+        flex: 1 1 250px;
+        max-width: 300px;
+    }
+
+    .hero {
+        flex: 2 1 600px;
+        text-align: center;
+    }
+
+    .data,
+    .hero,
+    .weather {
+        margin-bottom: 0;
+    }
+}
