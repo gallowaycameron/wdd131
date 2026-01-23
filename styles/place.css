@@ -2,9 +2,59 @@
     --primary: #DD0000;
     --secondary: #FFCC00;
     --background: #fff;
+    --background-fade: rgba(255, 255, 255, .8);
     --dark-text: #000;
     --light-text: #fff;
     --main-font: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--background);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--light-text);
+    padding: 1rem;
+    border-bottom: 15px solid var(--secondary);
+}
+
+.content {
+    display: block;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.data,
+.weather {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--background);
+    border-top: 1px solid var(--dark-text);
+    border-bottom: 1px solid var(--dark-text);
 }
 
 footer {
@@ -14,44 +64,50 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
     font-weight: bold;
+    border-bottom: 15px solid var(--secondary);
 }
 
-.content {
-    display: block;
-    margin: 1rem;
+.emoji {
+    display: none;
 }
 
-.data,
-.hero,
-.weather {
-    margin-bottom: 1.5rem;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    box-sizing: border-box;
+.weather img {
+    max-width: 8rem;
 }
 
-@media screen and (min-width: 768px) {
-    .content {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-
-    .data,
-    .weather {
-        flex: 1 1 250px;
-        max-width: 300px;
-    }
-
+@media screen and (min-width: 750px) {
     .hero {
-        flex: 2 1 600px;
-        text-align: center;
+        position: relative;
     }
 
-    .data,
-    .hero,
+    .data {
+        position: absolute;
+        top: 9rem;
+        left: 3rem;
+        max-width: 300px;
+        border: none;
+        background: var(--background-fade);
+    }
+
     .weather {
-        margin-bottom: 0;
+        position: absolute;
+        top: 23rem;
+        right: 3rem;
+        max-width: 300px;
+        border: none;
+        background: var(--background-fade);
+    }
+
+    h2 {
+        background-color: var(--secondary);
+        padding: 1rem;
+    }
+
+    .emoji {
+        display: inline;
+    }
+
+    .weather img {
+        display: none;
     }
 }
