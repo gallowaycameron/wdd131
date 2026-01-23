@@ -1,6 +1,6 @@
 :root {
-    --primary: #DD0000;
-    --secondary: #FFCC00;
+    --primary: #FFCC00;
+    --secondary: #DD0000;
     --background: #fff;
     --background-fade: rgba(255, 255, 255, .8);
     --dark-text: #000;
@@ -17,7 +17,6 @@
 body {
     font-family: var(--main-font);
     background-color: var(--background);
-    color: var(--dark-text);
     margin: 0;
     padding: 0;
 }
@@ -29,7 +28,7 @@ h1 {
 
 header {
     background-color: var(--primary);
-    color: var(--light-text);
+    color: var(--dark-text);
     padding: 1rem;
     border-bottom: 15px solid var(--secondary);
 }
@@ -59,12 +58,12 @@ header {
 
 footer {
     background-color: var(--primary);
-    color: var(--light-text);
+    color: var(--dark-text);
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
     font-weight: bold;
-    border-bottom: 15px solid var(--secondary);
+    border-top: 15px solid var(--secondary);
 }
 
 .emoji {
@@ -103,7 +102,7 @@ footer {
     }
 
     h2 {
-        background-color: var(--secondary);
+        background-color: var(--primary);
         padding: 1rem;
     }
 
