@@ -8,12 +8,6 @@
     --main-font: 'Roboto', sans-serif;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 body {
     font-family: var(--main-font);
     background-color: var(--background);
