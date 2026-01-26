@@ -1,0 +1,98 @@
+:root {
+    --primary: #1F2937;
+    --secondary: #F9FAFB;
+    --lght: rgb(91, 89, 89);
+    --border: #a6a8ac;
+    --text-light: #fff;
+    --text-dark: #000;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--primary);
+    padding: 15px;
+    text-align: center;
+}
+
+thead {
+    background-color: var(--primary);
+    color: var(--text-light);
+}
+
+.light {
+    background-color: var(--lght);
+}
+
+tbody {
+    background-color: var(--secondary);
+}
+
+caption {
+    caption-side: bottom;
+}
+
+tr td:first-child {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--border);
+}
+
+/* Teachers Example: 
+body {
+    padding: 5%;
+}
+
+table {
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+
+    caption {
+        caption-side: bottom;
+        font-size: smaller;
+        padding: 0.2rem;
+    }
+
+    th,
+    td {
+        padding: 0.5em 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        white-space: pre;
+    }
+
+    thead th,
+    tbody td {
+        text-align: center;
+    }
+
+    thead {
+        color: #fff;
+        background: #000;
+
+        th {
+            padding: 1rem;
+            font-size: larger;
+        }
+
+        tr:nth-last-child(1) {
+            background-color: #333;
+        }
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #eee;
+    }
+}
+
+.blank {
+    background-color: #000;
+} */
