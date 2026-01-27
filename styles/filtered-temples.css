@@ -77,6 +77,17 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    text-align: center;
+}
+
+#temple-grid section {
+    border: 3px solid var(--hover-color);
+    background: var(--hover-color);
+    padding: 1rem;
+}
+
+#temple-grid .label {
+    font-weight: bold;
 }
 
 figure {
@@ -88,6 +99,10 @@ figure {
 figure img {
     width: 100%;
     height: auto;
+}
+
+h1 {
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -115,5 +130,9 @@ figure img {
 
     header h2 {
         margin: 0;
+    }
+
+    #temple-grid img {
+
     }
 }

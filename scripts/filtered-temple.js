@@ -100,9 +100,9 @@ function displayTemples(templeList) {
         const image = document.createElement("img");
 
         name.textContent = temple.templeName;
-        location.textContent = `Location: ${temple.location}`;
-        dedicated.textContent = `Dedicated: ${temple.dedicated}`;
-        area.textContent = `Area: ${temple.area} sq ft`;
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedicated.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Area:</span> ${temple.area} sq ft`;
 
         image.src = temple.imageUrl;
         image.alt = temple.templeName;
