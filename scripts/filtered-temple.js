@@ -79,6 +79,22 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/boston-massachusetts/400x250/boston-temple-lds-945541-wallpaper.jpg"
     },
+    {
+        templeName: "London England",
+        location: "Surrey, England",
+        dedicated: "1953, August, 27",
+        area: 42652,
+        imageUrl:
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/london-england/400x250/london-england-temple-lds-650241-wallpaper.jpg"
+    },
+    {
+        templeName: "Seoul Korea",
+        location: "Seoul, South Korea",
+        dedicated: "1983, May, 9",
+        area: 28057,
+        imageUrl:
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/seoul-korea/400x250/seoul-korea-temple-lds-424784-wallpaper.jpg"
+    }
 ];
 
 const templeGrid = document.querySelector("#temple-grid");
