@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #beccfe;
+    --secondary-color: #beffe3;
+    --background: #fed3be;
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid var(--black);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+    padding: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+div {
+    border: 1px solid;
+    background-color: var(--white);
+    padding: .25rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+h2, h3 {
+    padding: .25rem;
+}
+
+p {
+    padding: .50rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    border: 1px solid;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.schema {
+    background-color: #000;
+    color: var(--white);
+    border-style: none;
+}
+
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.background-color {
+    color: var(--background);
+}
+
+.light-text {
+    color: var(--white);
+}
+
+.dark-text {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+}
+
+.alt-text {
+    font-family: "sans-serif";
+}
