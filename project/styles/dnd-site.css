@@ -73,9 +73,7 @@ p {
 footer {
     background-color: var(--primary-color);
     text-align: center;
-    border: 1px solid;
-    margin: 1rem;
-    border-radius: 10px;
+    border-top: 1px solid;
 }
 
 .schema {
@@ -109,4 +107,20 @@ footer {
 
 .alt-text {
     font-family: "sans-serif";
+}
+
+.wire figure{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wire figcaption {
+
+}
+
+.wire img {
+    width: 10rem;
+    padding: .5rem;
+    align-self: center;
+    justify-self: center;
 }
