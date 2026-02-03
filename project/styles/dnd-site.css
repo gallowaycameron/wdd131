@@ -108,12 +108,12 @@ footer {
     font-family: "sans-serif";
 }
 
-.wire figure{
+figure{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.wire img {
+figure img {
     width: 10rem;
     padding: .5rem;
     align-self: center;
