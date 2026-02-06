@@ -17,9 +17,82 @@
 
 body {
     font-family: var(--main-font);
+    background-color: var(--background);
+    color: var(--dark-text);
+    padding: 1rem;
 }
 
+header {
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--light-text);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
 
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: left;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--main-font);
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+input[type="submit"] {
+    background-color: var(--primary);
+    color: var(--light-text);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #274234;
+}
 
 footer {
     background-color: var(--primary);
@@ -30,8 +103,37 @@ footer {
     font-weight: bold;
 }
 
-@media (min-width: 768px) {
-    #menuBtn {
-            display: none;
-        }
+input[type="radio"] {
+    display: none;
+    position: relative;
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+
+.stars>label {
+    color: var(--primary);
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+.stars>label:hover {
+    color: var(--dark-text);
+}
+
+.stars>label::before {
+    content: "\2606";
+}
+
+.stars input:checked~label::before {
+    content: "\2605";
 }

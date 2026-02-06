@@ -28,22 +28,14 @@
             </fieldset>
         
             <fieldset>
-                <legend>Overall Rating</legend>
-        
-                <input type="radio" id="rating1" name="rating" value="1" required>
-                <label for="rating1">☆</label><br>
-        
-                <input type="radio" id="rating2" name="rating" value="2">
-                <label for="rating2">☆☆</label><br>
-        
-                <input type="radio" id="rating3" name="rating" value="3">
-                <label for="rating3">☆☆☆</label><br>
-        
-                <input type="radio" id="rating4" name="rating" value="4">
-                <label for="rating4">☆☆☆☆</label><br>
-        
-                <input type="radio" id="rating5" name="rating" value="5">
-                <label for="rating5">☆☆☆☆☆</label>
+                <label>Overall Rating</label>
+                <div class="stars">
+                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                </div>
             </fieldset>
         
             <fieldset>
@@ -57,18 +49,19 @@
                     <p>What did you find the most useful in this product?</p>
                     <p>(Please chack all that apply)</p>
                 </legend>
-        
-                <input type="checkbox" id="featureEase" name="features" value="Ease of Use">
-                <label for="featureEase">Ease of Use</label><br>
-        
-                <input type="checkbox" id="featurePerformance" name="features" value="Performance">
-                <label for="featurePerformance">Performance</label><br>
-        
-                <input type="checkbox" id="featureDesign" name="features" value="Design">
-                <label for="featureDesign">Design</label><br>
-        
-                <input type="checkbox" id="featureSupport" name="features" value="Customer Support">
+                
                 <label for="featureSupport">Customer Support</label>
+                <input type="checkbox" id="featureSupport" name="features" value="Customer Support">
+
+                <label for="featureDesign"><br>Design</label>
+                <input type="checkbox" id="featureDesign" name="features" value="Design">
+
+                <label for="featureEase"><br>Ease of Use</label>
+                <input type="checkbox" id="featureEase" name="features" value="Ease of Use">
+                
+                <label for="featurePerformance"><br>Performance</label>
+                <input type="checkbox" id="featurePerformance" name="features" value="Performance">
+                
             </fieldset>
         
             <fieldset>
