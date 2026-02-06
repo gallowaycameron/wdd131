@@ -26,27 +26,21 @@ const products = [
     }
 ];
 
-const productSelect = document.getElementById("productName");
-
-products.forEach(product => {
-    const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
-    productSelect.appendChild(option);
-});
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    if (window.location.href.indexOf("review.html") !== -1) {
+
+    const productSelect = document.getElementById("productName");
+    if (productSelect) {
+        products.forEach(product => {
+            const option = document.createElement("option");
+            option.value = product.name;
+            option.textContent = product.name;
+            productSelect.appendChild(option);
+        });
+    }
+
+    if (document.body.classList.contains("typage")) {
         let reviewCount = localStorage.getItem("reviewCount");
-
-        if (reviewCount === null) {
-            reviewCount = 0;
-        }
-        else {
-            reviewCount = parseInt(reviewCount, 10);
-        }
-
+        reviewCount = reviewCount ? parseInt(reviewCount, 10) : 0;
         reviewCount += 1;
         localStorage.setItem("reviewCount", reviewCount);
 
