@@ -1,0 +1,35 @@
+:root {
+    --primary: #24593d;
+    --secondary: #E0E0E0;
+    --background: #fff;
+    --dark-text: #000;
+    --light-text: #fff;
+    --main-font: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--light-text);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    #menuBtn {
+            display: none;
+        }
+}
