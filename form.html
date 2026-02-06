@@ -19,7 +19,7 @@
         <form method="get" action="review.html">
         
             <fieldset>
-                <label for="productName">Product Name</label><br>
+                <label for="productName">*Product Name</label><br>
 
                 <select id="productName" name="productName" required>
 
@@ -28,7 +28,7 @@
             </fieldset>
         
             <fieldset>
-                <label>Overall Rating</label>
+                <label>*Overall Rating</label>
                 <div class="stars">
                     <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
                     <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
@@ -39,15 +39,15 @@
             </fieldset>
         
             <fieldset>
-                <label for="installDate">Date of Installation</label><br>
+                <label for="installDate">*Date of Installation</label><br>
 
                 <input type="date" id="installDate" name="installDate" required>
             </fieldset>
         
             <fieldset>
                 <legend>
-                    <p>What did you find the most useful in this product?</p>
-                    <p>(Please chack all that apply)</p>
+                    <span>What did you find the most useful in this product?</span>
+                    <span>(Please chack all that apply)</span>
                 </legend>
                 
                 <label for="featureSupport">Customer Support</label>
@@ -77,6 +77,10 @@
             <input type="submit" value="Post Review">
         
         </form>
+
+        <div class="subfoot">
+            <p>* Indicates required fields</p>
+        </div>
     </main>
 
     <footer><p>&copy; <span id="currentyear"></span> Cameron Galloway - Utah</p>

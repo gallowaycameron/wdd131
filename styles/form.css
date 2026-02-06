@@ -5,6 +5,9 @@
     --dark-text: #000;
     --light-text: #fff;
     --main-font: 'Roboto', sans-serif;
+    --hover: #274234;
+    --invalid-red: #ff0000;
+    --invalid-pink: #ffe6e6;
 }
 
 *,
@@ -37,7 +40,6 @@ main {
     background-color: var(--secondary);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 form {
@@ -91,7 +93,11 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #274234;
+    background-color: var(--hover);
+}
+
+.subfoot {
+    margin-top: 2rem;
 }
 
 footer {
@@ -106,7 +112,6 @@ footer {
 input[type="radio"] {
     display: none;
     position: relative;
-    caret-color: rgba(0, 0, 0, 0);
 }
 
 .stars {
@@ -136,4 +141,55 @@ input[type="radio"] {
 
 .stars input:checked~label::before {
     content: "\2605";
+}
+
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+    border: 2px solid var(--invalid-red);
+    background-color: var(--invalid-pink);
+}
+
+
+input:required:valid,
+select:required:valid,
+textarea:required:valid {
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.stars:has(input:required:invalid) {
+    border: 2px solid var(--invalid-red);
+    background-color: var(--invalid-pink);
+    border-radius: 5px;
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    fieldset {
+        padding: 0.75rem;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    .stars>label {
+        font-size: 1.5rem;
+        width: 25px;
+        height: 25px;
+    }
+
+    input[type="submit"] {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
 }
