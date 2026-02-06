@@ -19,7 +19,7 @@
         <form method="get" action="review.html">
         
             <fieldset>
-                <label for="productName">Product Name</label>
+                <label for="productName">Product Name</label><br>
 
                 <select id="productName" name="productName" required>
 
@@ -47,13 +47,16 @@
             </fieldset>
         
             <fieldset>
-                <label for="installDate">Date of Installation</label>
+                <label for="installDate">Date of Installation</label><br>
 
                 <input type="date" id="installDate" name="installDate" required>
             </fieldset>
         
             <fieldset>
-                <legend>Useful Features</legend>
+                <legend>
+                    <p>What did you find the most useful in this product?</p>
+                    <p>(Please chack all that apply)</p>
+                </legend>
         
                 <input type="checkbox" id="featureEase" name="features" value="Ease of Use">
                 <label for="featureEase">Ease of Use</label><br>
@@ -69,16 +72,16 @@
             </fieldset>
         
             <fieldset>
-                <label for="writtenReview">Written Review</label>
+                <label for="writtenReview">Written Review (Optional)</label><br>
                 <textarea id="writtenReview" name="writtenReview" rows="5" cols="40"></textarea>
             </fieldset>
         
             <fieldset>
-                <label for="userName">Your Name</label>
+                <label for="userName">Your Name (optional)</label><br>
                 <input type="text" id="userName" name="userName">
             </fieldset>
         
-            <input type="submit" value="Submit Review">
+            <input type="submit" value="Post Review">
         
         </form>
     </main>

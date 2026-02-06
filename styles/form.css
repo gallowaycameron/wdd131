@@ -19,6 +19,8 @@ body {
     font-family: var(--main-font);
 }
 
+
+
 footer {
     background-color: var(--primary);
     color: var(--light-text);

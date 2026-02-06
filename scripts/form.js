@@ -35,11 +35,19 @@ products.forEach(product => {
     productSelect.appendChild(option);
 });
 
-let reviewCount = localStorage.getItem("reviewCount");
 
-if (reviewCount === null) {
-    reviewCount = 0;
-}
-else {
-    reviewCount = parseInt(reviewCount, 10)
-}
+document.addEventListener("DOMContentLoaded", () => {
+    let reviewCount = localStorage.getItem("reviewCount");
+
+    if (reviewCount === null) {
+        reviewCount = 0;
+    }
+    else {
+        reviewCount = parseInt(reviewCount, 10)
+    }
+
+    reviewCount += 1;
+    localStorage.setItem("reviewCount", reviewCount);
+
+    console.log("Total Reviews:", reviewCount)
+})
