@@ -19,7 +19,7 @@
         <form method="get" action="review.html">
         
             <fieldset>
-                <label for="productName">*Product Name</label><br>
+                <label for="productName" class="bold">*Product Name</label><br>
 
                 <select id="productName" name="productName" required>
 
@@ -28,26 +28,27 @@
             </fieldset>
         
             <fieldset>
-                <label>*Overall Rating</label>
+                <label class="bold">*Overall Rating</label><br>
+
                 <div class="stars">
                     <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
-                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
-                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
-                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
-                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                    <input type="radio" id="fourstar" name="stars" value="4"><label for="fourstar"></label>
+                    <input type="radio" id="threestar" name="stars" value="3"><label for="threestar"></label>
+                    <input type="radio" id="twostar" name="stars" value="2"><label for="twostar"></label>
+                    <input type="radio" id="onestar" name="stars" value="1"><label for="onestar"></label>
                 </div>
             </fieldset>
         
             <fieldset>
-                <label for="installDate">*Date of Installation</label><br>
+                <label for="installDate" class="bold">*Date of Installation</label><br>
 
                 <input type="date" id="installDate" name="installDate" required>
             </fieldset>
         
             <fieldset>
                 <legend>
-                    <span>What did you find the most useful in this product?</span>
-                    <span>(Please chack all that apply)</span>
+                    <span class="bold">What did you find the most useful in this product?<br>
+                    (Please check all that apply)</span>
                 </legend>
                 
                 <label for="featureSupport">Customer Support</label>
@@ -65,12 +66,12 @@
             </fieldset>
         
             <fieldset>
-                <label for="writtenReview">Written Review (Optional)</label><br>
+                <label for="writtenReview" class="bold">Written Review (Optional)</label><br>
                 <textarea id="writtenReview" name="writtenReview" rows="5" cols="40"></textarea>
             </fieldset>
         
             <fieldset>
-                <label for="userName">Your Name (optional)</label><br>
+                <label for="userName" class="bold">Your Name (optional)</label><br>
                 <input type="text" id="userName" name="userName">
             </fieldset>
         
