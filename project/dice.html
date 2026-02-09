@@ -19,11 +19,30 @@
 
 <body>
     <header>
-
+        <nav>
+            <img src="images/critical-forge-logo.webp"
+                alt="The logo for Critical Forge. It is a twenty sided dice with a hand holding a hammer in the middle.">
+            <span>Critical Forge</span>
+            <a href="index.html">Home</a>
+            <a href="character.html">Characters</a>
+            <a href="dice.html">Dice Roller</a>
+            <a href="reference.html">Reference Sheet</a>
+        </nav>
     </header>
 
     <main>
+        <h1>Dice Roller</h1>
 
+        <select id="dice">
+            <option value="4">d4</option>
+            <option value="6">d6</option>
+            <option value="8">d8</option>
+            <option value="12">d12</option>
+            <option value="20">d20</option>
+        </select>
+
+        <button id="roll">Roll</button>
+        <p id="result"></p>
     </main>
 
     <footer>
