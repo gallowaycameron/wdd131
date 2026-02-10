@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 nav .cta {
-    margin-left: auto;
+    margin-left: 450px;
     padding: 15px 20px;
     background: var(--secondary-color);
     color: var(--contrast);
@@ -108,8 +108,7 @@ nav .cta {
 }
 
 .option-card {
-    background: rgba(190, 204, 254, 0.85);
-    backdrop-filter: blur(6px);
+    background: var(--primary-color);
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
