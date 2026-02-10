@@ -84,6 +84,10 @@ header nav a.cta {
     padding: 12px 18px;
 }
 
+header nav a.cta:hover {
+    background-color: var(--primary-color);
+}
+
 @media (max-width: 900px) {
     header nav {
         display: none;

@@ -7,7 +7,7 @@
     <title>Critical Forge - Charcater Creator</title>
     <meta name="author" content="Cameron Galloway">
     <meta name="description" content="A webpage that assists users in creating a character by describing available attributes and guiding them through the assignment of stats and values">
-    <link rel="stylesheet" href="styles/dnd-site.css">
+    <link rel="stylesheet" href="styles/character.css">
     <link rel="stylesheet" href="styles/nav.css">
     <script src="scripts/dnd-site.js" defer></script>
     <script src="../scripts/getdates.js" defer></script>
@@ -41,15 +41,63 @@
 
     <main>
         <h1>Add Character</h1>
-
+    
         <form id="charForm">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="text" id="race" placeholder="Race" required>
-            <input type="text" id="class" placeholder="Class" required>
+            <p>Name</p>
+            <input type="text" id="name" placeholder="First Last" required>
+        
+            <p>Race</p>
+            <select id="race" required>
+                <option value="" disabled selected hidden>Select Race</option>
+                <option value="Aasimar">Aasimar</option>
+                <option value="Dragonborn">Dragonborn</option>
+                <option value="Dwarf">Dwarf</option>
+                <option value="Elf">Elf</option>
+                <option value="Gnome">Gnome</option>
+                <option value="Goliath">Goliath</option>
+                <option value="Halfling">Halfling</option>
+                <option value="Human">Human</option>
+                <option value="Orc">Orc</option>
+                <option value="Tiefling">Tiefling</option>
+            </select>
+        
+            <p>Class</p>
+            <select id="class" required>
+                
+                <option value="" disabled selected hidden>Select Class</option>
+                <option value="Barbarian">Barbarian</option>
+                <option value="Bard">Bard</option>
+                <option value="Cleric">Cleric</option>
+                <option value="Druid">Druid</option>
+                <option value="Fighter">Fighter</option>
+                <option value="Monk">Monk</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Ranger">Ranger</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Sorcerer">Sorcerer</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Wizard">Wizard</option>
+            </select>
+
+            <div class="points">
+                <p>Points Remaining: <span id="pointsRemaining">27</span></p>
+            </div>
+        
+            <div class="stats">
+                <label>STR <input type="number" id="str" min="8" max="15" value="8" required></label>
+                <label>DEX <input type="number" id="dex" min="8" max="15" value="8" required></label>
+                <label>CON <input type="number" id="con" min="8" max="15" value="8" required></label>
+                <label>INT <input type="number" id="int" min="8" max="15" value="8" required></label>
+                <label>WIS <input type="number" id="wis" min="8" max="15" value="8" required></label>
+                <label>CHA <input type="number" id="cha" min="8" max="15" value="8" required></label>
+            </div>
+        
             <button type="submit">Add</button>
         </form>
-        
+    
         <h2>Characters</h2>
+        <div id="charContainer"></div>
+
         <div id="charContainer"></div>
     </main>
 
