@@ -18,46 +18,6 @@ body {
     background-color: var(--background);
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-    background-color: var(--contrast);
-}
-
-nav img {
-    max-width: 80px;
-}
-
-nav span {
-    color: var(--secondary-color);
-    padding-right: 30px;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--primary-color);
-    padding: 10px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    background-color: var(--primary-color);
-    color: var(--contrast);
-    border-radius: 10px;
-}
-
-nav .cta {
-    margin-left: 450px;
-    padding: 15px 20px;
-    background: var(--secondary-color);
-    color: var(--contrast);
-    border-radius: 8px;
-    font-weight: bold;
-}
-
 .page-bg {
     position: relative;
     min-height: 100vh;
@@ -138,12 +98,41 @@ footer {
     padding: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .options {
         grid-template-columns: 1fr;
     }
 
     .hero h1 {
         font-size: 2.25rem;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--contrast);
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    header.menu-open #menuBtn {
+        display: none;
+    }
+
+    header.menu-open nav {
+        display: flex;
+    }
+
+    header.menu-open #closeBtn {
+        display: block;
+        margin-left: auto;
+    }
+
+    header.menu-open nav a {
+        padding: 10px;
+        width: 100%;
     }
 }

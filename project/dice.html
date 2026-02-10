@@ -8,6 +8,7 @@
     <meta name="author" content="Cameron Galloway">
     <meta name="description" content="A webpage that lets users choose which dice to roll and then displays the values of the selected dice">
     <link rel="stylesheet" href="styles/dnd-site.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <script src="scripts/dnd-site.js" defer></script>
     <script src="../scripts/getdates.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,15 +20,20 @@
 
 <body>
     <header>
+        <img src="images/critical-forge-logo.webp"
+            alt="The logo for Critical Forge. It is a twenty sided dice with a hand holding a hammer in the middle.">
+    
+        <h2>Critical Forge</h2>
+    
+        <button id="menuBtn" aria-label="Menu">☰</button>
+    
         <nav>
-            <img src="images/critical-forge-logo.webp"
-                alt="The logo for Critical Forge. It is a twenty sided dice with a hand holding a hammer in the middle.">
-            <span>Critical Forge</span>
+            <button id="closeBtn" aria-label="Close menu">✕</button>
+    
             <a href="index.html">Home</a>
             <a href="character.html">Characters</a>
             <a href="dice.html">Dice Roller</a>
             <a href="reference.html">Reference Sheet</a>
-
             <a href="sign-up.html" class="cta">Sign Up</a>
         </nav>
     </header>

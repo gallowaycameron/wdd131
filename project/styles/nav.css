@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #beccfe;
+    --secondary-color: #beffe3;
+    --background: #fed3be;
+    --contrast: #4A2C3D;
+    --white: #fff;
+    --black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hamburger {
+    display: none;
+    font-size: 32px;
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--contrast);
+}
+
+header img {
+    max-width: 80px;
+}
+
+header h2 {
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+header nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+header nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--contrast);
+    border-radius: 10px;
+}
+
+header nav a.cta {
+    background: var(--secondary-color);
+    color: var(--contrast);
+    border-radius: 8px;
+    padding: 12px 18px;
+}
+
+#menuBtn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#menuBtn.open {
+    color: red;
+}
+
+#closeBtn {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: red;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--contrast);
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    header.menu-open #menuBtn {
+        display: none;
+    }
+
+    header.menu-open nav {
+        display: flex;
+    }
+
+    header.menu-open #closeBtn {
+        display: block;
+        margin-left: auto;
+    }
+
+    header.menu-open nav a {
+        padding: 10px;
+        width: 100%;
+    }
+}
