@@ -5,6 +5,7 @@
     --contrast: #4A2C3D;
     --white: #fff;
     --black: #000;
+    --red: #ff0000;
 }
 
 * {
@@ -13,12 +14,27 @@
     box-sizing: border-box;
 }
 
-.hamburger {
+.hamburger,
+#menuBtn {
     display: none;
     font-size: 32px;
     background: transparent;
     border: none;
     color: var(--primary-color);
+    cursor: pointer;
+}
+
+#menuBtn {
+    margin-left: auto;
+}
+
+#closeBtn {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: var(--red);
+    margin-left: auto;
     cursor: pointer;
 }
 
@@ -43,7 +59,8 @@ header h2 {
 header nav {
     display: flex;
     gap: 1rem;
-    margin-left: auto;
+    width: 100%;
+    align-items: center;
 }
 
 header nav a {
@@ -60,34 +77,11 @@ header nav a:hover {
 }
 
 header nav a.cta {
+    margin-left: auto;
     background: var(--secondary-color);
     color: var(--contrast);
     border-radius: 8px;
     padding: 12px 18px;
-}
-
-#menuBtn {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--primary-color);
-    font-size: 32px;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-#menuBtn.open {
-    color: red;
-}
-
-#closeBtn {
-    display: none;
-    background: transparent;
-    border: none;
-    font-size: 32px;
-    color: red;
-    margin-left: auto;
-    cursor: pointer;
 }
 
 @media (max-width: 900px) {
@@ -102,21 +96,15 @@ header nav a.cta {
         display: block;
     }
 
-    header.menu-open #menuBtn {
-        display: none;
-    }
-
     header.menu-open nav {
         display: flex;
     }
 
     header.menu-open #closeBtn {
         display: block;
-        margin-left: auto;
     }
 
     header.menu-open nav a {
-        padding: 10px;
         width: 100%;
     }
 }
