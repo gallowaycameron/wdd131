@@ -1,79 +1,33 @@
-const form = document.getElementById("charForm");
-const container = document.getElementById("charContainer");
-const pointsRemainingEl = document.getElementById("pointsRemaining");
+var form = document.getElementById("charForm");
+var container = document.getElementById("charContainer");
 
-const basePoints = 27;
+var saved = localStorage.getItem("characters");
 
-const pointCost = {
-    8: 0,
-    9: 1,
-    10: 2,
-    11: 3,
-    12: 4,
-    13: 5,
-    14: 7,
-    15: 9
-};
-
-let saved = JSON.parse(localStorage.getItem("characters"));
-if (!saved) {
+if (saved) {
+    saved = JSON.parse(saved);
+} else {
     saved = [];
 }
 
-for (let i = 0; i < saved.length; i++) {
+for (var i = 0; i < saved.length; i++) {
     renderCharacter(saved[i]);
 }
 
-const statInputs = document.querySelectorAll(".stats input");
-for (let i = 0; i < statInputs.length; i++) {
-    statInputs[i].addEventListener("input", updatePoints);
-}
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-function updatePoints() {
-    const str = parseInt(document.getElementById("str").value);
-    const dex = parseInt(document.getElementById("dex").value);
-    const con = parseInt(document.getElementById("con").value);
-    const int = parseInt(document.getElementById("int").value);
-    const wis = parseInt(document.getElementById("wis").value);
-    const cha = parseInt(document.getElementById("cha").value);
-
-    let cost = 0;
-    cost += pointCost[str];
-    cost += pointCost[dex];
-    cost += pointCost[con];
-    cost += pointCost[int];
-    cost += pointCost[wis];
-    cost += pointCost[cha];
-
-    const pointsRemaining = basePoints - cost;
-    pointsRemainingEl.textContent = pointsRemaining;
-
-    document.querySelector("button[type='submit']").disabled = pointsRemaining < 0;
-}
-
-updatePoints();
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const points = parseInt(pointsRemainingEl.textContent);
-    if (points < 0) {
-        alert("You used too many points!");
-        return;
-    }
-
-    const character = {
+    var character = {
         id: Date.now(),
         name: document.getElementById("name").value,
         race: document.getElementById("race").value,
         class: document.getElementById("class").value,
         stats: {
-            STR: parseInt(document.getElementById("str").value),
-            DEX: parseInt(document.getElementById("dex").value),
-            CON: parseInt(document.getElementById("con").value),
-            INT: parseInt(document.getElementById("int").value),
-            WIS: parseInt(document.getElementById("wis").value),
-            CHA: parseInt(document.getElementById("cha").value)
+            STR: document.getElementById("str").value,
+            DEX: document.getElementById("dex").value,
+            CON: document.getElementById("con").value,
+            INT: document.getElementById("int").value,
+            WIS: document.getElementById("wis").value,
+            CHA: document.getElementById("cha").value
         }
     };
 
@@ -84,30 +38,34 @@ form.addEventListener("submit", function (e) {
     renderCharacter(character);
 
     form.reset();
-    updatePoints();
 });
 
-function renderCharacter(char) {
-    const card = document.createElement("div");
+function renderCharacter(character) {
+    var card = document.createElement("div");
     card.className = "charCard";
 
     card.innerHTML =
-        "<h3>" + char.name + "</h3>" +
-        "<p>" + char.race + " - " + char.class + "</p>" +
-        "<p>STR: " + char.stats.STR + " | DEX: " + char.stats.DEX + " | CON: " + char.stats.CON + "</p>" +
-        "<p>INT: " + char.stats.INT + " | WIS: " + char.stats.WIS + " | CHA: " + char.stats.CHA + "</p>" +
-        "<button class='deleteBtn'>Delete</button>";
+        "<h3>" + character.name + "</h3>" +
+        "<p>" + character.race + " - " + character.class + "</p>" +
+        "<p>STR: " + character.stats.STR +
+        " | DEX: " + character.stats.DEX +
+        " | CON: " + character.stats.CON + "</p>" +
+        "<p>INT: " + character.stats.INT +
+        " | WIS: " + character.stats.WIS +
+        " | CHA: " + character.stats.CHA + "</p>" +
+        "<button>Delete</button>";
 
-    const deleteBtn = card.querySelector(".deleteBtn");
+    var deleteBtn = card.querySelector("button");
     deleteBtn.addEventListener("click", function () {
-        deleteCharacter(char.id, card);
+        deleteCharacter(character.id, card);
     });
 
     container.appendChild(card);
 }
 
 function deleteCharacter(id, cardElement) {
-    for (let i = 0; i < saved.length; i++) {
+
+    for (var i = 0; i < saved.length; i++) {
         if (saved[i].id === id) {
             saved.splice(i, 1);
             break;

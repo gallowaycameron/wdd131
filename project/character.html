@@ -40,7 +40,12 @@
     </header>
 
     <main>
-        <h1>Add Character</h1>
+        <div class="charCreator">
+            <h1>Character Creator</h1>
+            <img src="images/dice-in-book.webp" alt="A picture of a black twenty sided dice inside of a book" loading="lazy">
+        </div>
+
+        <h2>Add Character</h1>
     
         <form id="charForm">
             <p>Name</p>
@@ -78,10 +83,6 @@
                 <option value="Warlock">Warlock</option>
                 <option value="Wizard">Wizard</option>
             </select>
-
-            <div class="points">
-                <p>Points Remaining: <span id="pointsRemaining">27</span></p>
-            </div>
         
             <div class="stats">
                 <label>STR <input type="number" id="str" min="8" max="15" value="8" required></label>
@@ -96,8 +97,6 @@
         </form>
     
         <h2>Characters</h2>
-        <div id="charContainer"></div>
-
         <div id="charContainer"></div>
     </main>
 
