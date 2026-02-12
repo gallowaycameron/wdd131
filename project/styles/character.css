@@ -150,15 +150,9 @@ h2 {
     color: var(--secondary-color);
 }
 
-footer {
-    background-color: var(--contrast);
-    color: var(--primary-color);
-    text-align: center;
-    padding: 1rem;
-}
-
 @media (max-width: 900px) {
     .stats {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }

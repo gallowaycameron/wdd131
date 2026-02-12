@@ -88,6 +88,13 @@ header nav a.cta:hover {
     background-color: var(--primary-color);
 }
 
+footer {
+    background-color: var(--contrast);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
 @media (max-width: 900px) {
     header nav {
         display: none;
@@ -100,15 +107,21 @@ header nav a.cta:hover {
         display: block;
     }
 
+    header.menu-open #menuBtn {
+        display: none;
+    }
+
     header.menu-open nav {
         display: flex;
     }
 
     header.menu-open #closeBtn {
         display: block;
+        margin-left: auto;
     }
 
     header.menu-open nav a {
         width: 100%;
+        padding: 10px;
     }
 }

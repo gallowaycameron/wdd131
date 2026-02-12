@@ -57,15 +57,12 @@ nav a:hover {
     color: var(--contrast);
     border-radius: 10px;
 }
-
-footer {
-    background-color: var(--contrast);
-    color: var(--primary-color);
-    text-align: center;
-    border-top: 1px solid;
-    padding: 1rem;
-}
-
 .ref {
     color: var(--black);
+}
+
+@media (max-width: 900px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
