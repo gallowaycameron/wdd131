@@ -7,10 +7,11 @@
     <title>Critical Forge - Dice Rolling</title>
     <meta name="author" content="Cameron Galloway">
     <meta name="description" content="A webpage that lets users choose which dice to roll and then displays the values of the selected dice">
-    <link rel="stylesheet" href="styles/dnd-site.css">
+    <link rel="stylesheet" href="styles/dice.css">
     <link rel="stylesheet" href="styles/nav.css">
     <script src="scripts/dnd-site.js" defer></script>
     <script src="../scripts/getdates.js" defer></script>
+    <script src="scripts/dice.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
@@ -40,7 +41,8 @@
 
     <main>
         <h1>Dice Roller</h1>
-
+        
+        <label for="dice">Choose a die:</label>
         <select id="dice">
             <option value="4">d4</option>
             <option value="6">d6</option>
@@ -48,7 +50,10 @@
             <option value="12">d12</option>
             <option value="20">d20</option>
         </select>
-
+        
+        <br><label for="quantity">How many?</label>
+        <input type="number" id="quantity" value="0" min="0">
+        
         <button id="roll">Roll</button>
         <p id="result"></p>
     </main>
