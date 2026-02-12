@@ -35,8 +35,17 @@
      color: var(--contrast);
  }
 
+ label {
+    font-weight: bold;
+ }
+
+ hr {
+    margin: 20px;
+ }
+
  select,
  input {
+    width: 100%;
      padding: 0.5rem;
      margin: 0.5rem;
      border-radius: 6px;
