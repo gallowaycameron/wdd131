@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #beccfe;
+    --secondary-color: #beffe3;
+    --background: #fed3be;
+    --contrast: #4A2C3D;
+    --white: #fff;
+    --black: #000;
+    --font: "Roboto",
+        sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--background);
+}
+
+main {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--contrast);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--contrast);
+}
+
+input,
+select {
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border-radius: 6px;
+    border: 2px solid var(--contrast);
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--contrast);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--black);
+    color: var(--secondary-color);
+}
+
+#message {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--contrast);
+}
+
+textarea {
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border-radius: 6px;
+    border: 2px solid var(--contrast);
+    font-size: 1rem;
+    resize: vertical;
+}
+
+@media (max-width: 900px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
