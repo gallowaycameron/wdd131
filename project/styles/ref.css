@@ -5,6 +5,8 @@
     --contrast: #4A2C3D;
     --white: #fff;
     --black: #000;
+    --font: "Roboto",
+        sans-serif;
 }
 
 * {
@@ -14,7 +16,7 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font);
     background-color: var(--background);
 }
 
