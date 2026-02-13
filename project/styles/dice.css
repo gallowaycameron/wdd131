@@ -80,6 +80,14 @@
      color: var(--contrast);
  }
 
+ .hero-image {
+     width: 100%;
+     max-width: 400px;
+     display: block;
+     margin: 1rem auto;
+     border-radius: 8px;
+ }
+
  @media (max-width: 900px) {
      .stats {
          grid-template-columns: repeat(2, 1fr);

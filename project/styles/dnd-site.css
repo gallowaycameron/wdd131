@@ -75,7 +75,7 @@ body {
     border-radius: 8px;
     text-align: center;
     color: var(--contrast);
-}
+} 
 
 .button {
     display: inline-block;

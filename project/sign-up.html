@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Critical Forge - Home Page</title>
+    <title>Critical Forge - Sign-up Page</title>
     <meta name="author" content="Cameron Galloway">
-    <meta name="description"
-        content="The home page for the author’s final project assignment, designed to showcase the website and provide users with access to its available features">
+    <meta name="description" content="A page to allow the user to sign up for info about campaigns and any news">
     <link rel="stylesheet" href="styles/sign-up.css">
     <link rel="stylesheet" href="styles/nav.css">
     <script src="scripts/dnd-site.js" defer></script>
@@ -41,8 +40,20 @@
     </header>
 
     <main>
-        <h1>Join the Guild</h1>
-        <p class="join">Want to join other fellow adventures? Sign-up for our Guid and you can recieve notifications about adventures you can join!</p>
+        <section class="hero">
+            <picture>
+                <source srcset="images/long-dragon.webp" media="(max-width: 768px)">
+                <img src="images/river-map.webp" alt="A DnD map showcasing a camp by a river" class="guild-image">
+            </picture>
+    
+            <div class="hero-overlay"></div>
+    
+            <div class="hero-text">
+                <h1>Join the Guild</h1>
+                <p class="join">Want to join other fellow adventurers? Sign up for our Guild and receive notifications about
+                    adventures you can join!</p>
+            </div>
+        </section>
     
         <form id="signupForm">
     
@@ -91,7 +102,7 @@
             
             <div class="radio-group">
                 <label class="radio-item">
-                    <input type="radio" name="style" value="Roleplay" required>
+                    <input type="radio" name="style" value="Roleplay">
                     Roleplay
                 </label>
             
