@@ -53,7 +53,7 @@ main {
     max-width: 500px;
     padding: 2rem;
     background: var(--primary-color);
-    border-radius: 12px;
+    border-radius: 8px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -70,10 +70,8 @@ p {
 #confirmationMessage {
     margin: 1rem 0;
     padding: 1rem;
-
     background-color: var(--secondary-color);
     border-radius: 8px;
-
     font-size: 1rem;
     text-align: left;
 }
@@ -91,10 +89,8 @@ p {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-
     background-color: var(--contrast);
     color: var(--primary-color);
-
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
