@@ -73,7 +73,7 @@ header nav a {
 header nav a:hover {
     background-color: var(--primary-color);
     color: var(--contrast);
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 header nav a.cta {

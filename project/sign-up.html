@@ -42,17 +42,18 @@
 
     <main>
         <h1>Join the Guild</h1>
+        <p class="join">Want to join other fellow adventures? Sign-up for our Guid and you can recieve notifications about adventures you can join!</p>
     
         <form id="signupForm">
     
-            <label for="username">Adventurer Name</label>
+            <label for="username">*Adventurer Name</label>
             <input type="text" id="username" required>
     
-            <label for="email">Guild Email</label>
+            <label for="email">*Email</label>
             <input type="email" id="email" required>
     
-            <label for="race">Choose Your Race</label>
-            <select id="race" required>
+            <label for="race">Choose Your Characters Race</label>
+            <select id="race">
                 <option value="" disabled selected hidden>-- Select Race --</option>
                 <option>Aasimar</option>
                 <option>Dragonborn</option>
@@ -66,8 +67,8 @@
                 <option>Tiefling</option>
             </select>
     
-            <label for="class">Choose Your Class</label>
-            <select id="class" required>
+            <label for="class">Choose Your Characters Class</label>
+            <select id="class">
                 <option value="" disabled selected hidden>-- Select Class --</option>
                 <option>Barbarian</option>
                 <option>Bard</option>
@@ -87,16 +88,28 @@
             <input type="number" id="level" min="1" max="20" value="1">
     
             <label>Preferred Play Style</label>
-            <div>
-                <input type="radio" name="style" value="Roleplay" required> Roleplay
-                <input type="radio" name="style" value="Combat"> Combat
-                <input type="radio" name="style" value="Balanced"> Balanced
+            
+            <div class="radio-group">
+                <label class="radio-item">
+                    <input type="radio" name="style" value="Roleplay" required>
+                    Roleplay
+                </label>
+            
+                <label class="radio-item">
+                    <input type="radio" name="style" value="Combat">
+                    Combat
+                </label>
+            
+                <label class="radio-item">
+                    <input type="radio" name="style" value="Balanced">
+                    Balanced
+                </label>
             </div>
     
             <label for="backstory">Character Backstory</label>
             <textarea id="backstory" rows="4" placeholder="Tell us your legend..."></textarea>
     
-            <button type="submit">Join the Adventure</button>
+            <button type="submit">Sign Up for Adventure</button>
     
             <p id="message"></p>
     

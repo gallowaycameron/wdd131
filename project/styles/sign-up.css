@@ -25,8 +25,15 @@ main {
     margin: 3rem auto;
     padding: 2rem;
     background-color: var(--primary-color);
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.join {
+    color: var(--contrast);
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
 }
 
 h1 {
@@ -50,9 +57,34 @@ input,
 select {
     padding: 0.6rem;
     margin-top: 0.3rem;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid var(--contrast);
     font-size: 1rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: var(--contrast);
+    cursor: pointer;
 }
 
 button {
@@ -81,7 +113,7 @@ button:hover {
 textarea {
     padding: 0.6rem;
     margin-top: 0.3rem;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 2px solid var(--contrast);
     font-size: 1rem;
     resize: vertical;
