@@ -39,32 +39,28 @@
         </nav>
     </header>
 
-    <main>
-        <h1>Dice Roller</h1>
+<div class="hero-banner-container">
+    <img src="images/red-dice.webp" alt="Dice rolling banner">
+    <h1>Dice Roller</h1>
+</div>
 
-        <picture>
-            <source srcset="images/long-gold-dice.webp" media="(max-width: 768px)">
-            <img src="images/red-dice.webp" alt="A picture of a black twenty sided dice inside of a book" class="hero-image">
-        </picture>
-        
-        <label for="dice">Choose a die:</label>
-        <select id="dice">
-            <option value="4">d4</option>
-            <option value="6">d6</option>
-            <option value="8">d8</option>
-            <option value="10">d10</option>
-            <option value="12">d12</option>
-            <option value="20">d20</option>
-        </select>
-        <hr>
-        
-        <label for="quantity">How many?</label>
-        <input type="number" id="quantity" value="0" min="0">
-        <hr>
-        
-        <button id="roll">Roll</button>
-        <p id="result"></p>
-    </main>
+<main>
+    <label for="dice">Choose a die:</label>
+    <select id="dice">
+        <option value="4">d4</option>
+        <option value="6">d6</option>
+        <option value="8">d8</option>
+        <option value="10">d10</option>
+        <option value="12">d12</option>
+        <option value="20">d20</option>
+    </select>
+    <hr>
+    <label for="quantity">How many?</label>
+    <input type="number" id="quantity" value="0" min="0">
+    <hr>
+    <button id="roll">Roll</button>
+    <p id="result"></p>
+</main>
 
     <footer>
         <p>&copy; <span id="currentyear"></span> Cameron Galloway - Utah</p>
