@@ -3,8 +3,9 @@ let form = document.getElementById("signupForm");
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    let username = document.getElementById("username").value;
+    let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
+    let username = document.getElementById("username").value;
     let race = document.getElementById("race").value;
     let playerClass = document.getElementById("class").value;
     let level = document.getElementById("level").value;
@@ -13,8 +14,9 @@ form.addEventListener("submit", function (event) {
     let style = styleInput ? styleInput.value : "Not specified";
 
     let userData = {
-        name: username,
+        name: name,
         email: email,
+        username: username,
         race: race,
         class: playerClass,
         level: level,

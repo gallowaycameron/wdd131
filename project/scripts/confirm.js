@@ -6,6 +6,7 @@ if (userDataString) {
     confirmationDiv.innerHTML = `
         <p>Adventurer <strong>${user.name}</strong> has successfully joined the guild!</p>
         <ul>
+            <li>Character Name: ${user.username}</li>
             <li>Race: ${user.race}</li>
             <li>Class: ${user.class}</li>
             <li>Level: ${user.level}</li>
