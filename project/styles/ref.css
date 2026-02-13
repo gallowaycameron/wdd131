@@ -8,12 +8,6 @@
     --font: "Roboto", sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: var(--font);
     background-color: var(--background);
@@ -24,37 +18,11 @@ h1 {
     padding: 1rem;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: var(--contrast);
-    border-radius: 8px;
-}
-
-nav img {
-    max-width: 100px;
-}
-
-nav span {
-    color: var(--secondary-color);
-    padding-right: 30px;
-    font-weight: bold;
-    font-size: 30px;
-}
-
-a {
+.ref-table a {
     text-decoration: none;
     color: var(--primary-color);
-    padding: 10px;
     font-weight: bold;
-}
-
-nav a:hover {
-    background-color: var(--secondary-color);
-    color: var(--contrast);
-    border-radius: 8px;
+    padding: 0.5rem 1rem;
 }
 
 .ref-table {

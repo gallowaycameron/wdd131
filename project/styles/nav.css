@@ -14,12 +14,6 @@
     box-sizing: border-box;
 }
 
-header,
-footer {
-    position: relative;
-    z-index: 2;
-}
-
 .hamburger,
 #menuBtn,
 #closeBtn {
