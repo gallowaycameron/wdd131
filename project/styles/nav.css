@@ -2,7 +2,7 @@
     --primary-color: #beccfe;
     --secondary-color: #beffe3;
     --background: #fed3be;
-    --contrast: #4A2C3D;
+    --contrast: #4a2c3d;
     --white: #fff;
     --black: #000;
     --red: #ff0000;
@@ -14,28 +14,30 @@
     box-sizing: border-box;
 }
 
+header,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
 .hamburger,
-#menuBtn {
-    display: none;
-    font-size: 32px;
-    background: transparent;
-    border: none;
-    color: var(--primary-color);
-    cursor: pointer;
-}
-
-#menuBtn {
-    margin-left: auto;
-}
-
+#menuBtn,
 #closeBtn {
     display: none;
     background: transparent;
     border: none;
     font-size: 32px;
+    cursor: pointer;
+}
+
+#menuBtn {
+    color: var(--primary-color);
+    margin-left: auto;
+}
+
+#closeBtn {
     color: var(--red);
     margin-left: auto;
-    cursor: pointer;
 }
 
 header {
@@ -51,23 +53,22 @@ header img {
 }
 
 header h2 {
-    color: var(--secondary-color);
     font-size: 30px;
-    margin: 0;
+    color: var(--secondary-color);
 }
 
 header nav {
     display: flex;
+    align-items: center;
     gap: 1rem;
     width: 100%;
-    align-items: center;
 }
 
 header nav a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
     padding: 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 header nav a:hover {
@@ -78,10 +79,10 @@ header nav a:hover {
 
 header nav a.cta {
     margin-left: auto;
-    background: var(--secondary-color);
+    padding: 12px 18px;
+    background-color: var(--secondary-color);
     color: var(--contrast);
     border-radius: 8px;
-    padding: 12px 18px;
 }
 
 header nav a.cta:hover {
@@ -89,10 +90,10 @@ header nav a.cta:hover {
 }
 
 footer {
+    padding: 1rem;
+    text-align: center;
     background-color: var(--contrast);
     color: var(--primary-color);
-    text-align: center;
-    padding: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -100,7 +101,7 @@ footer {
         display: none;
         flex-direction: column;
         width: 100%;
-        background: var(--contrast);
+        background-color: var(--contrast);
     }
 
     #menuBtn {
@@ -111,13 +112,12 @@ footer {
         display: none;
     }
 
-    header.menu-open nav {
-        display: flex;
-    }
-
     header.menu-open #closeBtn {
         display: block;
-        margin-left: auto;
+    }
+
+    header.menu-open nav {
+        display: flex;
     }
 
     header.menu-open nav a {
