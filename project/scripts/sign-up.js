@@ -1,7 +1,6 @@
 let form = document.getElementById("signupForm");
 
 form.addEventListener("submit", function (event) {
-
     event.preventDefault();
 
     let username = document.getElementById("username").value;
@@ -10,8 +9,8 @@ form.addEventListener("submit", function (event) {
     let playerClass = document.getElementById("class").value;
     let level = document.getElementById("level").value;
     let backstory = document.getElementById("backstory").value;
-
-    let style = document.querySelector('input[name="style"]:checked').value;
+    let styleInput = document.querySelector('input[name="style"]:checked');
+    let style = styleInput ? styleInput.value : "Not specified";
 
     let userData = {
         name: username,
@@ -23,12 +22,7 @@ form.addEventListener("submit", function (event) {
         backstory: backstory
     };
 
-    let userDataString = JSON.stringify(userData);
+    localStorage.setItem("guildMember", JSON.stringify(userData));
 
-    localStorage.setItem("guildMember", userDataString);
-
-    document.getElementById("message").textContent =
-        "Welcome to the guild, " + username + "!";
-
-    form.reset();
+    window.location.href = "confirmation.html";
 });
