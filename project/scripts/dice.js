@@ -27,5 +27,5 @@ rollButton.addEventListener("click", function () {
         }
     }
 
-    resultParagraph.textContent = "Rolls: " + rolls + " | Total: " + total;
+    resultParagraph.textContent = `Rolls: ${rolls} | Total: ${total}`;
 });

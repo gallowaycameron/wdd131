@@ -20,7 +20,7 @@ form.addEventListener("submit", function (event) {
         id: Date.now(),
         name: document.getElementById("name").value,
         race: document.getElementById("race").value,
-        class: document.getElementById("class").value,
+        class: document.getElementById("characterClass").value,
         stats: {
             STR: document.getElementById("str").value,
             DEX: document.getElementById("dex").value,
@@ -44,16 +44,13 @@ function renderCharacter(character) {
     var card = document.createElement("div");
     card.className = "charCard";
 
-    card.innerHTML =
-        "<h3>" + character.name + "</h3>" +
-        "<p>" + character.race + " - " + character.class + "</p>" +
-        "<p>STR: " + character.stats.STR +
-        " | DEX: " + character.stats.DEX +
-        " | CON: " + character.stats.CON + "</p>" +
-        "<p>INT: " + character.stats.INT +
-        " | WIS: " + character.stats.WIS +
-        " | CHA: " + character.stats.CHA + "</p>" +
-        "<button>Delete</button>";
+    card.innerHTML = `
+    <h3>${character.name}</h3>
+    <p>${character.race} - ${character.class}</p>
+    <p>STR: ${character.stats.STR} | DEX: ${character.stats.DEX} | CON: ${character.stats.CON}</p>
+    <p>INT: ${character.stats.INT} | WIS: ${character.stats.WIS} | CHA: ${character.stats.CHA}</p>
+    <button>Delete</button>
+`;
 
     var deleteBtn = card.querySelector("button");
     deleteBtn.addEventListener("click", function () {
