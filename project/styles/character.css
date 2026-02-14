@@ -14,7 +14,8 @@
     box-sizing: border-box;
 }
 
-header h1, header h2 {
+header h1,
+header h2 {
     margin: 0;
 }
 
@@ -99,19 +100,27 @@ h2 {
 .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.stats label {
+.stat {
     display: flex;
     flex-direction: column;
+}
+
+.stat label {
+    margin-bottom: 0.25rem;
     font-weight: bold;
     color: var(--contrast);
 }
 
-.stats input {
-    margin-top: 0.25rem;
+.stat input {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--contrast);
+    font-size: 1rem;
 }
 
 #charContainer {
@@ -132,7 +141,7 @@ h2 {
     color: var(--contrast);
 }
 
-.charCard p {
+.charCard label {
     margin-bottom: 0.5rem;
 }
 
@@ -162,9 +171,9 @@ h2 {
 }
 
 @media (max-width: 768px) {
-
     .stats {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
         gap: 0.5rem;
     }
 

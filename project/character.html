@@ -15,9 +15,9 @@
     <script src="scripts/character.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -43,17 +43,19 @@
     <main class="page-bg">
         <picture>
             <source srcset="images/long-waterfall.webp" media="(max-width: 768px)">
-            <img src="images/dice-in-book.webp" alt="A picture of a black twenty sided dice inside of a book"
+            <img src="images/dice-in-book.webp" alt="Black twenty-sided die resting inside a book"
                 class="page-bg-image">
         </picture>
 
         <div class="page-content">
             <h1 class="titles">Character Creator</h1>
+
             <form id="charForm">
-                <p>Name</p>
+
+                <label for="name">*Name</label>
                 <input type="text" id="name" placeholder="First Last" required>
 
-                <p>Race</p>
+                <label for="race">*Race</label>
                 <select id="race" required>
                     <option value="" disabled selected hidden>Select Race</option>
                     <option value="Aasimar">Aasimar</option>
@@ -68,8 +70,8 @@
                     <option value="Tiefling">Tiefling</option>
                 </select>
 
-                <p>Class</p>
-                <select id="class" required>
+                <label for="characterClass">*Class</label>
+                <select id="characterClass" required>
                     <option value="" disabled selected hidden>Select Class</option>
                     <option value="Barbarian">Barbarian</option>
                     <option value="Bard">Bard</option>
@@ -86,13 +88,32 @@
                 </select>
 
                 <div class="stats">
-                    <label>STR <input type="number" id="str" min="8" max="15" value="8" required></label>
-                    <label>DEX <input type="number" id="dex" min="8" max="15" value="8" required></label>
-                    <label>CON <input type="number" id="con" min="8" max="15" value="8" required></label>
-                    <label>INT <input type="number" id="int" min="8" max="15" value="8" required></label>
-                    <label>WIS <input type="number" id="wis" min="8" max="15" value="8" required></label>
-                    <label>CHA <input type="number" id="cha" min="8" max="15" value="8" required></label>
+                    <div class="stat">
+                        <label for="str">STR</label>
+                        <input type="number" id="str" min="8" max="15" value="8" required>
+                    </div>
+                    <div class="stat">
+                        <label for="dex">DEX</label>
+                        <input type="number" id="dex" min="8" max="15" value="8" required>
+                    </div>
+                    <div class="stat">
+                        <label for="con">CON</label>
+                        <input type="number" id="con" min="8" max="15" value="8" required>
+                    </div>
+                    <div class="stat">
+                        <label for="int">INT</label>
+                        <input type="number" id="int" min="8" max="15" value="8" required>
+                    </div>
+                    <div class="stat">
+                        <label for="wis">WIS</label>
+                        <input type="number" id="wis" min="8" max="15" value="8" required>
+                    </div>
+                    <div class="stat">
+                        <label for="cha">CHA</label>
+                        <input type="number" id="cha" min="8" max="15" value="8" required>
+                    </div>
                 </div>
+
 
                 <button type="submit">Create Character</button>
             </form>
@@ -107,5 +128,4 @@
         <p id="lastModified"></p>
     </footer>
 </body>
-
 </html>

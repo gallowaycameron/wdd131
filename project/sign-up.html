@@ -14,9 +14,7 @@
     <script src="scripts/sign-up.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -54,20 +52,19 @@
                     adventures you can join!</p>
             </div>
         </section>
-    
+        
         <form id="signupForm">
-    
             <label for="name">*Your Name</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
     
             <label for="email">*Email</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
 
             <label for="username">*Adventurer Name</label>
-            <input type="text" id="username" required>
+            <input type="text" id="username" name="username" required>
     
             <label for="race">Choose Your Character's Race</label>
-            <select id="race">
+            <select id="race" name="race">
                 <option value="" disabled selected hidden>-- Select Race --</option>
                 <option>Aasimar</option>
                 <option>Dragonborn</option>
@@ -82,7 +79,7 @@
             </select>
     
             <label for="class">Choose Your Character's Class</label>
-            <select id="class">
+            <select id="class" name="class">
                 <option value="" disabled selected hidden>-- Select Class --</option>
                 <option>Barbarian</option>
                 <option>Bard</option>
@@ -99,10 +96,9 @@
             </select>
     
             <label for="level">Starting Level</label>
-            <input type="number" id="level" min="1" max="20" value="1">
+            <input type="number" id="level" min="1" max="20" value="1" name="level">
     
-            <label>Preferred Play Style</label>
-            
+            <label>Preferred Play Style</label> 
             <div class="radio-group">
                 <label class="radio-item">
                     <input type="radio" name="style" value="Roleplay">
@@ -121,7 +117,7 @@
             </div>
     
             <label for="backstory">Character Backstory</label>
-            <textarea id="backstory" rows="4" placeholder="Tell us your legend..."></textarea>
+            <textarea id="backstory" rows="4" placeholder="Tell us your legend..." name="backstory"></textarea>
     
             <button type="submit">Sign Up for Adventure</button>
     
@@ -135,5 +131,4 @@
         <p id="lastModified"></p>
     </footer>
 </body>
-
 </html>
