@@ -98,23 +98,26 @@
             <label for="level">Starting Level</label>
             <input type="number" id="level" min="1" max="20" value="1" name="level">
     
-            <label>Preferred Play Style</label> 
-            <div class="radio-group">
-                <label class="radio-item">
-                    <input type="radio" name="style" value="Roleplay">
-                    Roleplay
-                </label>
+            <fieldset>
+                <legend>Preferred Play Style</legend>
             
-                <label class="radio-item">
-                    <input type="radio" name="style" value="Combat">
-                    Combat
-                </label>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="style" value="Roleplay">
+                        Roleplay
+                    </label>
             
-                <label class="radio-item">
-                    <input type="radio" name="style" value="Balanced">
-                    Balanced
-                </label>
-            </div>
+                    <label class="radio-item">
+                        <input type="radio" name="style" value="Combat">
+                        Combat
+                    </label>
+            
+                    <label class="radio-item">
+                        <input type="radio" name="style" value="Balanced">
+                        Balanced
+                    </label>
+                </div>
+            </fieldset>
     
             <label for="backstory">Character Backstory</label>
             <textarea id="backstory" rows="4" placeholder="Tell us your legend..." name="backstory"></textarea>

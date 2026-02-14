@@ -35,6 +35,7 @@ main {
     max-height: 400px;
     overflow: hidden;
     border-radius: 8px;
+    margin-bottom: 1.5rem;
 }
 
 .guild-image {
@@ -89,6 +90,19 @@ label {
     color: var(--contrast);
 }
 
+fieldset {
+    border: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--contrast);
+    margin-bottom: 0.5rem;
+}
+
 input,
 select,
 textarea {
@@ -106,6 +120,7 @@ textarea {
 
 .radio-group {
     display: flex;
+    justify-content: space-around;
     gap: 1.5rem;
     margin-top: 0.5rem;
 }
@@ -113,7 +128,7 @@ textarea {
 .radio-item {
     display: inline-flex;
     align-items: center;
-    gap: 0.9rem;
+    gap: 0.6rem;
     cursor: pointer;
 }
 
@@ -147,6 +162,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+
     main {
         width: 90%;
         padding: 1.5rem;
